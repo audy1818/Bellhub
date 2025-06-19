@@ -1,5 +1,5 @@
 
--- BellHub vFinal - All-in-One Auto Fisher + Full Proteksi
+-- BellHub Final - All-in-One Auto Fisher + Full Proteksi
 -- includes: auto shake, auto cast, legit reel, fast reel, perfect catch, auto balance-nuke, mod detect + GUI toggle
 
 -- → Hide log output
