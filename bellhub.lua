@@ -1,6 +1,3 @@
-bellhub.lua
-
-
 
 -- BellHub vFinal - All-in-One Auto Fisher + Full Proteksi
 -- includes: auto shake, auto cast, legit reel, fast reel, perfect catch, auto balance-nuke, mod detect + GUI toggle
@@ -45,7 +42,7 @@ Frame.Draggable = true
 local LabelLogo = Instance.new("ImageLabel", Frame)
 LabelLogo.Size = UDim2.new(0, 40, 0, 40)
 LabelLogo.Position = UDim2.new(0.5, -20, 0, 10)
-LabelLogo.Image = "rbxassetid://PEACOCK_MARLIN_LOGO_ID"  -- Ganti pakai asset ID logo sesuai request
+LabelLogo.Image = "rbxassetid://13943220900"  -- Random ikan logo (ikan marlin)
 LabelLogo.BackgroundTransparency = 1
 
 local Label = Instance.new("TextLabel", Frame)
