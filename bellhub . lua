@@ -1,0 +1,42 @@
+-- BellHub Basic GUI + Apex Hunt Detector (Sea 2 Only)
+local BellHub = Instance.new("ScreenGui")
+BellHub.Name = "BellHub"
+BellHub.ResetOnSpawn = false
+BellHub.Parent = game:GetService("CoreGui")
+
+local Frame = Instance.new("Frame", BellHub)
+Frame.Size = UDim2.new(0, 250, 0, 130)
+Frame.Position = UDim2.new(0.05, 0, 0.4, 0)
+Frame.BackgroundColor3 = Color3.fromRGB(25,25,25)
+Frame.BorderSizePixel = 0
+
+local Title = Instance.new("TextLabel", Frame)
+Title.Size = UDim2.new(1, 0, 0, 30)
+Title.Text = "🔔 BellHub GUI"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 18
+
+local Status = Instance.new("TextLabel", Frame)
+Status.Size = UDim2.new(1, -10, 0, 50)
+Status.Position = UDim2.new(0, 5, 0, 35)
+Status.TextWrapped = true
+Status.Text = "⌛ Menunggu Apex Hunt..."
+Status.TextColor3 = Color3.fromRGB(255,255,255)
+Status.BackgroundTransparency = 1
+Status.Font = Enum.Font.Gotham
+Status.TextSize = 14
+
+local function DetectApex()
+    while wait(1) do
+        local apex = workspace:FindFirstChild("Apex Leviathan") or workspace:FindFirstChild("Magician Narwhal")
+        if apex then
+            Status.Text = "⚠️ Boss Terdeteksi: " .. apex.Name
+            game.Players.LocalPlayer.Character:PivotTo(apex:GetPivot() + Vector3.new(0, 10, 0))
+            break
+        end
+    end
+end
+
+task.delay(3, DetectApex)
